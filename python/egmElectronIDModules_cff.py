@@ -19,9 +19,9 @@ def setIDs(process, options):
         #'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Fall17_94X_V1_cff',
         #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V1_cff',
         #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V1_cff',
-        #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V2_cff',
-        #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V2_cff',
-        #'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Fall17_94X_V2_cff',
+        'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V2_cff',
+        'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V2_cff',
+        'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Fall17_94X_V2_cff',
         'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_RunIIIWinter22_iso_V1_cff',
         'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_RunIIIWinter22_noIso_V1_cff',
         'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Winter22_122X_V1_cff'
@@ -91,8 +91,8 @@ def setIDs(process, options):
     for wp in ['wp80', 'wp90', 'wpLoose']:
       #addNewProbeModule(probeSequence, 'MVA94X%snoiso' %wp,   'egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-%s' % wp)
       #addNewProbeModule(probeSequence, 'MVA94X%siso' %wp,     'egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-%s' % wp)
-      #addNewProbeModule(probeSequence, 'MVA94X%snoisoV2' %wp, 'egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-%s' % wp)
-      #addNewProbeModule(probeSequence, 'MVA94X%sisoV2' %wp,   'egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-%s' % wp)
+      addNewProbeModule(probeSequence, 'MVA94X%snoisoV2' %wp, 'egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-%s' % wp)
+      addNewProbeModule(probeSequence, 'MVA94X%sisoV2' %wp,   'egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-%s' % wp)
       
       if wp=='wpLoose': continue
       addNewProbeModule(probeSequence, 'MVA122X%snoisoV1' %wp, 'egmGsfElectronIDs:mvaEleID-RunIIIWinter22-noIso-V1-%s' % wp)

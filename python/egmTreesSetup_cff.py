@@ -30,8 +30,8 @@ def setTagsProbes(process, options):
 
     ####################### TAG ELECTRON ############################
     process.tagEle = cms.EDProducer(eleHLTProducer,
-                                        filterNames = cms.vstring(options['TnPHLTTagFilters']),
-                                        inputs      = cms.InputTag("tagEleCutBasedTight"),
+                                        filterNames = cms.vstring(options['TnPHLTProbeFilters']),
+                                        inputs      = cms.InputTag("goodElectrons"),
                                         bits        = cms.InputTag('TriggerResults::' + options['HLTProcessName']),
                                         objects     = cms.InputTag(hltObjects),
                                         dR          = cms.double(0.3),
@@ -124,7 +124,7 @@ def setTagsProbes(process, options):
 
 
     ########################### TnP pairs ############################
-    masscut = cms.string("50<mass<130")
+    masscut = cms.string("1<mass<6")
     process.tnpPairingEleHLT   = cms.EDProducer("CandViewShallowCloneCombiner",
                                         decay = cms.string("tagEle@+ probeEle@-"),
                                         checkCharge = cms.bool(True),
